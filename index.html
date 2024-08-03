@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptTODOアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">TODOアプリケーション</h1>
+    </header>
+    <main>
+        <div class="add-todo-section">
+                <label for="todo">TODO:</label>
+                <input type="text" name="text" id="todo">
+            <input type="button" value="追加" class="todo-button">
+        </div>
+        <div class="incomplete-section">
+            <h3 class="incomplete-title">未完了のTODO</h3>
+            <ul class="incomplete-lists">
+                <li class="incomplete-list">
+                    <span>プログラミング学習</span>
+                    <input class="incomplete-button" type="button" value="完了">
+                    <input class="incomplete-button" type="button" value="削除">
+                </li>
+                <li class="incomplete-list">
+                    <span>動画編集</span>
+                    <input class="incomplete-button" type="button" value="完了">
+                    <input class="incomplete-button" type="button" value="削除">
+                </li>
+            </ul>
+        </div>
+        <div class="complete-section">
+            <h3 class="complete-title">完了のTODO</h3>
+            <ul class="complete-lists">
+                <li class="complete-list">
+                    <span>プログラミング学習</span>
+                    <input class="complete-button" type="button" value="戻す">
+                    <input class="complete-button" type="button" value="削除">
+                </li>
+                <li class="complete-list">
+                    <span>動画編集</span>
+                    <input class="complete-button" type="button" value="戻す">
+                    <input class="complete-button" type="button" value="削除">
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
