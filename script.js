@@ -17,19 +17,18 @@ const addTodo = () => {
 
     document.querySelector('.incomplete-lists').appendChild(li);
     todoInput.value = '';
-    // ↓これは削除機能と完了機能を追加してから追記
     addIncompleteEventListeners(li);
 }
 
 // TODOを削除する関数
-const deleteTodo = () => {
-    const li = this.parentNode;
+const deleteTodo = (event) => {
+    const li = event.target.parentNode;
     li.parentNode.removeChild(li);
 }
 
 // TODOを完了にする関数
-const completeTodo = () => {
-    const li = this.parentNode;
+const completeTodo = (event) => {
+    const li = event.target.parentNode;
     li.className = 'complete-list';
     li.innerHTML = `
         <span>${li.querySelector('span').textContent}</span>
@@ -37,13 +36,12 @@ const completeTodo = () => {
         <input class="complete-button" type="button" value="削除">
     `;
     document.querySelector('.complete-lists').appendChild(li);
-    // ↓これも後ででいいかもしれない
     addCompleteEventListeners(li);
 }
 
 // TODOを未完了に戻す関数
-const revertTodo = () => {
-    const li = this.parentNode;
+const revertTodo = (event) => {
+    const li = event.target.parentNode;
     li.className = 'incomplete-list';
     li.innerHTML = `
         <span>${li.querySelector('span').textContent}</span>
